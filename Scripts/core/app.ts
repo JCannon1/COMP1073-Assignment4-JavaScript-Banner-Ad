@@ -62,7 +62,7 @@ function Main():void {
   stage.addChild(goodByeLabel);
 
   // add a clickMeButton to the stage
-  clickMeButton = new createjs.Bitmap("../../Assets/images/clickMeButton.png");
+  clickMeButton = new createjs.Bitmap("../../Assets/images/ProjectsButton.svg");
   clickMeButton.regX = clickMeButton.getBounds().width * 0.5;
   clickMeButton.regY = clickMeButton.getBounds().height * 0.5;
   clickMeButton.x = 125;
