@@ -5,7 +5,7 @@
     var stage;
     var helloLabel;
     var goodByeLabel;
-    var clickMeButton;
+    var projectsButton;
     /**
      * This method initializes the createjs Stage object and
      * starts the Game Loop
@@ -18,7 +18,7 @@
         canvas = document.getElementById("canvas");
         // creates a new stage container - parent container for our app
         stage = new createjs.Stage(canvas);
-        createjs.Ticker.framerate = 30; // set framerate to 60 FPS
+        createjs.Ticker.framerate = 30; // set framerate to 30 FPS
         createjs.Ticker.on("tick", Update); // call the Update method every frame
         Main(); // call the main function
     }
@@ -28,12 +28,13 @@
      * @method Update
      * @returns void
      */
-    // helloLabel moving towards the righ of the canvas
+    // helloLabel moving towards the right of the canvas
     function Update(event) {
         helloLabel.x = helloLabel.x + 5;
 		if (helloLabel.x > stage.canvas.width) { helloLabel.x = 0; }
 		stage.update(event);
 
+        // goodbyeLabel moving towards the bottom of the canvas
         goodByeLabel.y = goodByeLabel.y + 7;
 		if (goodByeLabel.y > stage.canvas.width) { goodByeLabel.y = 0; }
 		stage.update(event);
@@ -57,10 +58,10 @@
         stage.addChild(goodByeLabel);
         // add a projectsButton to the stage
         projectsButton = new createjs.Bitmap("../../Assets/images/projectsButton.png");
-        projectsButton.regX = clickMeButton.getBounds().width * 0.5;
-        projectsButton.regY = clickMeButton.getBounds().height * 0.5;
-        projectsButton.x = 5;
-        projectsButton.y = 2;
+        projectsButton.regX = projectsButton.getBounds().width * 0.5;
+        projectsButton.regY = projectsButton.getBounds().height * 0.5;
+        projectsButton.x = 225;
+        projectsButton.y = 310;
         stage.addChild(projectsButton);
 
         // added link to projects page when button is clicked
