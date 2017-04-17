@@ -1,0 +1,24 @@
+/* File name: app.css */
+/* Author's name: Jesse Cannon */
+/* Web site name: http://comp1073-jessecannon-assignment3-miniportfolio-json-data.azurewebsites.net/index.html */
+/* File description: CSS page for my mini portfolio */
+
+/* change header colour to grey */
+header {
+    background-color: grey;
+}
+/* change background colour to light grey */
+body {
+    padding-bottom: 70px;
+    color: black;
+    background-color: lightgrey;
+     }
+/* change all fonts to "Garamond" */
+main {
+    font-family: "Garamond", sans-serif; 
+    color: black;
+}
+/* changed footer colour to grey */
+footer {
+    background-color: grey;
+}
