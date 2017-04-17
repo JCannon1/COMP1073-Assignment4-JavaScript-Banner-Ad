@@ -18,7 +18,7 @@
         canvas = document.getElementById("canvas");
         // creates a new stage container - parent container for our app
         stage = new createjs.Stage(canvas);
-        createjs.Ticker.framerate = 60; // set framerate to 60 FPS
+        createjs.Ticker.framerate = 30; // set framerate to 60 FPS
         createjs.Ticker.on("tick", Update); // call the Update method every frame
         Main(); // call the main function
     }
@@ -28,10 +28,17 @@
      * @method Update
      * @returns void
      */
+    // helloLabel moving towards the righ of the canvas
     function Update(event) {
-        helloLabel.rotation -= 5; // rotate counter clockwise every frame
-        goodByeLabel.rotation += 5;
-        stage.update(); // redraw the stage
+        helloLabel.x = helloLabel.x + 5;
+		if (helloLabel.x > stage.canvas.width) { helloLabel.x = 0; }
+		stage.update(event);
+
+        goodByeLabel.y = goodByeLabel.y + 7;
+		if (goodByeLabel.y > stage.canvas.width) { goodByeLabel.y = 0; }
+		stage.update(event);
+
+       
     }
     /**
      * This method is where all the fun happens - we add child objects to the stage here
@@ -43,19 +50,22 @@
         console.log("App Started!!");
         // all objects added to the stage appear in "layer order"
         // add a helloLabel to the stage
-        helloLabel = new objects.Label("Click on Projects!", "20px", "Consolas", "#000000", 125, 125, true);
+        helloLabel = new objects.Label("Click on Projects! For Star Wars Movie Poster", "20px", "Consolas", "green", 125, 125, true);
         stage.addChild(helloLabel);
         // add a goodbyeLabel to the stage
-        goodByeLabel = new objects.Label("Or Click Projects Button!", "24px", "Arial", "#FF0000", 125, 125, true);
+        goodByeLabel = new objects.Label("Or Click Projects Button!", "24px", "Arial", "black", 125, 125, true);
         stage.addChild(goodByeLabel);
-        // add a clickMeButton to the stage
-        projectsButton = new createjs.Bitmap("../../Assets/images/ProjectsButton.svg");
+        // add a projectsButton to the stage
+        projectsButton = new createjs.Bitmap("../../Assets/images/projectsButton.png");
         projectsButton.regX = clickMeButton.getBounds().width * 0.5;
         projectsButton.regY = clickMeButton.getBounds().height * 0.5;
-        projectsButton.x = 125;
-        projectsButton.y = 200;
+        projectsButton.x = 5;
+        projectsButton.y = 2;
         stage.addChild(projectsButton);
+
+        // added link to projects page when button is clicked
         projectsButton.on("click", function () {
+            location.href = "http://assignment4-javascript-banner-ad.azurewebsites.net/projects.html";
             helloLabel.text = "Thanks for Clicking!";
             goodByeLabel.text = "Hope you Enjoy!";
         });
