@@ -1,7 +1,8 @@
 /* File name: app.css */
 /* Author's name: Jesse Cannon */
-/* Web site name: http://comp1073-jessecannon-assignment3-miniportfolio-json-data.azurewebsites.net/index.html */
-/* File description: CSS page for my mini portfolio */
+/* Student ID: 200348532 */
+/* Web site name: http://assignment4-javascript-banner-ad.azurewebsites.net/index.html */
+/* File description: CSS page for my mini portfolio JavaScript Banner Ad */
 
 /* change header colour to grey */
 header {
@@ -26,6 +27,7 @@ footer {
   display: flex;
   width: 100%;
 }
+/* made canvas background white with a 1px solid black border */
 #canvas {
   background-color: white;
   margin: 0 auto;

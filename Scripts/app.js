@@ -1,7 +1,9 @@
-// File name: app.js 
-// Author's name: Jesse Cannon 
-// Web site name: http://comp1073-jessecannon-assignment3-miniportfolio-json-data.azurewebsites.net/index.html
-// File description: main page JavaScript for my mini portfolio 
+/* File name: app.js */
+/* Author's name: Jesse Cannon */
+/* Student ID: 200348532 */
+/* Web site name: http://assignment4-javascript-banner-ad.azurewebsites.net/index.html */
+/* File description: JavaScript page for my mini portfolio JavaScript Banner Ad */
+
 
 "use strict";
 // start of the IIFE

@@ -1,7 +1,9 @@
-// File name: contact.js 
-// Author's name: Jesse Cannon 
-// Web site name: http://comp1073-jessecannon-assignment3-miniportfolio-json-data.azurewebsites.net/projects.html
-// File description: contact page JavaScript for my mini portfolio 
+//* File name: projects.js */
+/* Author's name: Jesse Cannon */
+/* Student ID: 200348532 */
+/* Web site name: http://assignment4-javascript-banner-ad.azurewebsites.net/projects.html */
+/* File description: Project page JavaScript for my mini portfolio JavaScript Banner Ad */
+
 
 // project page JavaScript
 
