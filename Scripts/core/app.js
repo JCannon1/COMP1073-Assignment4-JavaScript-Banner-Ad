@@ -43,21 +43,21 @@
         console.log("App Started!!");
         // all objects added to the stage appear in "layer order"
         // add a helloLabel to the stage
-        helloLabel = new objects.Label("Hello, World", "20px", "Consolas", "#000000", 125, 125, true);
+        helloLabel = new objects.Label("Click on Projects!", "20px", "Consolas", "#000000", 125, 125, true);
         stage.addChild(helloLabel);
         // add a goodbyeLabel to the stage
-        goodByeLabel = new objects.Label("Good Bye!", "24px", "Arial", "#FF0000", 125, 125, true);
+        goodByeLabel = new objects.Label("Or Click Projects Button!", "24px", "Arial", "#FF0000", 125, 125, true);
         stage.addChild(goodByeLabel);
         // add a clickMeButton to the stage
-        clickMeButton = new createjs.Bitmap("../../Assets/images/clickMeButton.png");
-        clickMeButton.regX = clickMeButton.getBounds().width * 0.5;
-        clickMeButton.regY = clickMeButton.getBounds().height * 0.5;
-        clickMeButton.x = 125;
-        clickMeButton.y = 200;
-        stage.addChild(clickMeButton);
-        clickMeButton.on("click", function () {
-            helloLabel.text = "Hi Ya!";
-            goodByeLabel.text = "See Ya!";
+        projectsButton = new createjs.Bitmap("../../Assets/images/ProjectsButton.svg");
+        projectsButton.regX = clickMeButton.getBounds().width * 0.5;
+        projectsButton.regY = clickMeButton.getBounds().height * 0.5;
+        projectsButton.x = 125;
+        projectsButton.y = 200;
+        stage.addChild(projectsButton);
+        projectsButton.on("click", function () {
+            helloLabel.text = "Thanks for Clicking!";
+            goodByeLabel.text = "Hope you Enjoy!";
         });
     }
     window.onload = Start;
